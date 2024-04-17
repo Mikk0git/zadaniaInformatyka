@@ -13,14 +13,16 @@ def oddNumRec(limit,num=1, sum=0):
     
 
 
-def oddNumIter(num):
+def oddNumIter(limit):
+    num = 1
     sum = 0
-    while num < 100:
+    while num < limit:
         if num % 2 != 0:
             sum = sum + num
         num +=1 
         print(f"Liczba: {num}\n Suma: {sum}")
-        
+    return sum   
     
-# oddNumIter(1)
+    
+# print(f"Suma ostateczna: {oddNumIter(100)}")  
 print(f"Suma ostateczna: {oddNumRec(100)}")
